@@ -6,7 +6,7 @@ getRepo(){
 }
 
 getDeps(){
-    apt install gawk zlib1g libncurses5 libncurses5-dev libncursesw5-dev g++ flex unzip wget
+    apt install gawk zlib1g libncurses5 libncurses5-dev libncursesw5-dev g++ flex unzip wget rsync
 }
 
 updateRepo(){
@@ -23,5 +23,5 @@ fi
     getRepo
     getDeps
     updateRepo
-    exit
+    ./../compile;
 
