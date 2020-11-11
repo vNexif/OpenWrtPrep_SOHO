@@ -9,7 +9,7 @@ getEssential(){
 }
 
 createUsers(){
-    adduser osboxes sudo
+    /usr/sbin/adduser osboxes sudo
     echo ' osboxes ALL=(ALL)    ALL' >> /etc/sudoers
 }
 
