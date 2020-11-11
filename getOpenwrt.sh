@@ -6,15 +6,17 @@ getRepo(){
 }
 
 updateRepo(){
-    ./scripts/feeds update -a;
-    ./scripts/feeds install -a;
+    bash ./scripts/feeds update -a;
+    bash ./scripts/feeds install -a;
 }
 
 
 if ! [ -x "$(command -v git)" ]; then
     echo 'Error: git is not installed.' >&2
     exit 1
-else
+fi
+
     getRepo
     updateRepo
-fi
+    exit
+
