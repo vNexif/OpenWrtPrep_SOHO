@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #check debian version
 Deb_Ver=$(cat /etc/os-release | grep "VERSION_ID" | awk -F "\"" '{print $2}')
