@@ -23,5 +23,5 @@ fi
     getRepo
     getDeps
     updateRepo
-    ./../compile;
+    exit
 
