@@ -1,5 +1,4 @@
 #!/bin/bash
-PATH=/bin:/sbin:/usr/bin:/usr/sbin:$PATH
 
 getRepo(){
     git clone https://git.openwrt.org/openwrt/openwrt.git;
@@ -7,8 +6,8 @@ getRepo(){
 }
 
 updateRepo(){
-    bash ./scripts/feeds update -a;
-    bash ./scripts/feeds install -a;
+    ./scripts/feeds update -a;
+    ./scripts/feeds install -a;
 }
 
 
