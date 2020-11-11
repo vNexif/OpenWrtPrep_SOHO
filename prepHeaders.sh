@@ -9,8 +9,8 @@ getEssential(){
 }
 
 createUsers(){
-    /usr/sbin/adduser --shell /sbin/nologin osboxes
-    /usr/sbin/adduser osboxes sudo
+    /usr/sbin/adduser osboxes --shell /sbin/nologin
+    /usr/sbin/usermod -a -G sudo osboxes
     echo ' osboxes ALL=(ALL)    ALL' >> /etc/sudoers
 }
 
