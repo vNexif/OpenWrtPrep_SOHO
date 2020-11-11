@@ -17,3 +17,4 @@ doUpdate(){
 }
 
 sources
+doUpdate
