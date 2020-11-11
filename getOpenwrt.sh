@@ -5,6 +5,10 @@ getRepo(){
     cd openwrt;
 }
 
+getDeps(){
+    apt install gawk zlib1g libncurses5 libncurses5-dev libncursesw5-dev g++ flex unzip wget
+}
+
 updateRepo(){
     ./scripts/feeds update -a;
     ./scripts/feeds install -a;
@@ -17,6 +21,7 @@ if ! [ -x "$(command -v git)" ]; then
 fi
 
     getRepo
+    getDeps
     updateRepo
     exit
 
