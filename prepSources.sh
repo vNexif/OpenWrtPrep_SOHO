@@ -13,7 +13,9 @@ if [ $Deb_Ver = "10" ]; then
 fi
 
 doUpdate(){
-    apt update; apt dist-upgrade -y; reboot;
+    apt update;
+    apt dist-upgrade -y;
+    /sbin/reboot;
 }
 
 sources
