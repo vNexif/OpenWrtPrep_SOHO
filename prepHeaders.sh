@@ -17,7 +17,7 @@ createUsers(){
 if [ "$EUID" -ne 0 ]; then
     beSu
 fi
-if [ "$EUID" -e 0 ]; then
+if [ "$EUID" = 0 ]; then
     getEssential
     createUsers
 fi
