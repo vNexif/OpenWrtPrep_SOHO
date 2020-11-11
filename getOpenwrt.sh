@@ -1,4 +1,5 @@
 #!/bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:$PATH
 
 getRepo(){
     git clone https://git.openwrt.org/openwrt/openwrt.git;
