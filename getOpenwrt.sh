@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Allow Root compilation
+export FORCE_UNSAFE_CONFIGURE=1
+
 getRepo(){
     git clone https://git.openwrt.org/openwrt/openwrt.git;
     cd openwrt;
