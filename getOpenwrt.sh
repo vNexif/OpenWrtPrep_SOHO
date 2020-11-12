@@ -23,5 +23,7 @@ fi
     getRepo
     getDeps
     updateRepo
+    make menuconfig
+    make download
     exit
 
