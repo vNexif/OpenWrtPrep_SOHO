@@ -3,6 +3,9 @@
 getRepo(){
     git clone https://git.openwrt.org/openwrt/openwrt.git;
     cd openwrt;
+    
+    #Get ath79 default config
+    wget https://downloads.openwrt.org/releases/19.07.0/targets/ath79/generic/config.buildinfo -O .config
 }
 
 getDeps(){
@@ -23,7 +26,9 @@ fi
     getRepo
     getDeps
     updateRepo
-    make menuconfig
+    #make menuconfig disabled because of fetched .config file
+    #Comment wget and uncomment make menuconfig or type it yourself in your console
+    #make menuconfig
     make download
     exit
 
