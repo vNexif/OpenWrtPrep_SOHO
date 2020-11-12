@@ -29,6 +29,7 @@ fi
     #make menuconfig disabled because of fetched .config file
     #Comment wget and uncomment make menuconfig or type it yourself in your console
     #make menuconfig
-    make download
+    make -j$(nproc) download
+    make -j$(nproc) V=s
     exit
 
